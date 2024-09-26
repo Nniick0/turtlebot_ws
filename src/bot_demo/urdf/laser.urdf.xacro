@@ -1,0 +1,31 @@
+<robot name="my_sensors" xmlns:xacro="http://wiki.ros.org/xacro">
+
+    <link name="laser">
+
+        <visual>
+        <origin rpy="0 0 -1.5708" xyz="0 0 0"/>
+        <geometry>
+            <mesh filename="package://bot_demo/stl/rplidar.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="Yellow"/>
+        </visual>
+
+        <collision>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+            <mesh filename="package://bot_demo/stl/rplidar.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        </collision>
+        
+    </link>
+    <gazebo reference="laser">
+        <material>Gazebo/Yellow</material>
+    </gazebo>
+
+    <joint name="laser_joint" type="fixed">
+        <origin xyz="0.555 0 0.325" rpy="0 0 0" />
+        <parent link="chassis" />
+        <child link="laser" />
+    </joint>
+
+</robot>

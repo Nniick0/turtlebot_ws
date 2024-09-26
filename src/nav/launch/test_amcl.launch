@@ -1,0 +1,10 @@
+<launch>
+    
+    <arg name="map" default="nav.yaml" />
+    
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find nav)/map/$(arg map)"/>
+    
+    <include file="$(find nav)/launch/amcl.launch" />
+    
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find bot_demo)/config/testamcl.rviz" />
+</launch>
