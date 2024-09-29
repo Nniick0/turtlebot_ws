@@ -32,10 +32,10 @@ root = tk.Tk()
 root.title("Robot Navigation")
 
 
-button_start = tk.Button(root, text="Go", command=start_navigation)
+button_start = tk.Button(root, text="Go", command=start_navigation, width=15, height=3)
 button_start.pack()
 
-button_return = tk.Button(root, text="back", command=return_navigation)
+button_return = tk.Button(root, text="back", command=return_navigation, width=15, height=3)
 button_return.pack()
 
 
