@@ -132,7 +132,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/nick/turtlebot_ws/build/gtest/cmake_install.cmake")
   include("/home/nick/turtlebot_ws/build/rplidar_ros/cmake_install.cmake")
-  include("/home/nick/turtlebot_ws/build/scan_tools/laser_scan_matcher/cmake_install.cmake")
   include("/home/nick/turtlebot_ws/build/nav/cmake_install.cmake")
   include("/home/nick/turtlebot_ws/build/bot_demo/cmake_install.cmake")
 

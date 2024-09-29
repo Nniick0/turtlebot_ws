@@ -1,0 +1,18 @@
+mbf_costmap_nav:
+  global_planner: "global_planner/GlobalPlanner"
+  local_planner: "teb_local_planner/TebLocalPlannerROS"
+  
+  recovery_behaviors:
+    - name: "clear_costmap_recovery"
+      type: "clear_costmap_recovery/ClearCostmapRecovery"
+    - name: "rotate_recovery"
+      type: "rotate_recovery/RotateRecovery"
+  
+  planners:
+    - "global_planner/GlobalPlanner"
+  controllers:
+    - "teb_local_planner/TebLocalPlannerROS"
+  
+  costmaps:
+    global_costmap: "global_costmap"
+    local_costmap: "local_costmap"

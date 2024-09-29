@@ -1,2 +1,2 @@
-bot_demo:nav:rplidar_ros:scan_tools/laser_scan_matcher
+bot_demo:nav:rplidar_ros
 -DCATKIN_DEVEL_PREFIX=/home/nick/turtlebot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/nick/turtlebot_ws/install -G Unix Makefiles

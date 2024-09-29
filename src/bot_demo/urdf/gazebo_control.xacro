@@ -17,13 +17,7 @@
 
     
     <xacro:joint_trans joint_name="left_wheel_joint" />
-    <xacro:joint_trans joint_name="right_wheel_joint" />
-
-    
-    <gazebo>
-        <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
-        </plugin>
-    </gazebo>-->
+    <xacro:joint_trans joint_name="right_wheel_joint" />-->
     <gazebo>
         <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
 
@@ -87,7 +81,3 @@
     </gazebo>
 
 </robot>
-
-
-
-

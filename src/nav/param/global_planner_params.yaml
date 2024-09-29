@@ -1,0 +1,19 @@
+GlobalPlanner:
+  allow_unknown: false       
+  default_tolerance: 0.2    
+  visualize_potential: false 
+ 
+  use_dijkstra: true  
+  use_quadratic: true  
+  use_grid_path: false
+
+  old_navfn_behavior: true 
+
+
+  lethal_cost: 253  #致命代价值,默认是设置为253,可以动态来配置该参数.
+  neutral_cost: 55  #中等代价值,默认设置是50,可以动态配置该参数.
+  cost_factor: 3  #代价地图与每个代价值相乘的因子 #3
+  publish_potential: true #是否发布costmap的势函数.
+
+  orientation_mode: 0 
+  orientation_window_size: 1 

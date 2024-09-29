@@ -1,4 +1,6 @@
 <launch>
+
+    <param name="use_sim_time" value="true"/>
     <!--robot-->
     <param name="robot_description" command="$(find xacro)/xacro $(find bot_demo)/urdf/robot.urdf.xacro" />
 

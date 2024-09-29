@@ -1,0 +1,9 @@
+<launch>
+  <!-- 啟動 move_base_flex -->
+  <node pkg="mbf_costmap_nav" type="mbf_costmap_nav" name="move_base_flex" output="screen">
+    <rosparam file="$(find nav)/param/mbf_base_flex.yaml" command="load" />
+  </node>
+
+  <rosparam file="$(find nav)/param/global_costmap_params.yaml" command="load" />
+  <rosparam file="$(find nav)/param/local_costmap_params.yaml" command="load" />
+</launch>
