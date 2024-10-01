@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find bot_demo)/launch/gabot.launch"/>
+    <include file="$(find nav)/launch/navigation.launch"/>
+</launch>
