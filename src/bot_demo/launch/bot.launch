@@ -9,8 +9,8 @@
 	<!-- 运行robot_state_publisher节点，发布tf  -->
 	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 	
-	<!-- 运行rviz可视化界面 -->
-	<node name="rviz" pkg="rviz" type="rviz"/>
+	<!-- 运行rviz可视化界面 
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find bot_demo)/config/my_robot.rviz"/>-->
 
     
 </launch>
