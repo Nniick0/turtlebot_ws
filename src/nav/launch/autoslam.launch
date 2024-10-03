@@ -1,0 +1,6 @@
+<launch>
+
+    <include file="$(find nav)/launch/gampping.launch"/>
+    <include file="$(find nav)/launch/move_base.launch"/>
+
+</launch>
