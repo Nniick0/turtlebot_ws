@@ -40,18 +40,18 @@
     <link name="chassis">
 
         <visual>
-            <origin xyz="0.3 0 0.15"/> 
+            <origin xyz="0.3 0 0.125"/> 
             <geometry>
-                <box size="0.6 0.485 0.3"/>
+                <box size="0.6 0.485 0.25"/>
             </geometry>
             <material name="White"/> 
         </visual>
 
         
         <collision>
-            <origin xyz="0.3 0 0.15"/> 
+            <origin xyz="0.3 0 0.125"/> 
             <geometry>
-                <box size="0.6 0.485 0.3"/>
+                <box size="0.6 0.485 0.25"/>
             </geometry>
         </collision>
 
@@ -67,7 +67,7 @@
     <joint name="caster_wheel_joint" type="fixed">
         <parent link="chassis"/>
         <child link="caster_wheel"/>
-        <origin xyz="0.555 0 -0.05" rpy="0 0 0"/>
+        <origin xyz="0.555 0 -0.014" rpy="0 0 0"/>
     </joint>
 
     <link name="caster_wheel">
@@ -98,7 +98,7 @@
     <joint name="left_wheel_joint" type="continuous">
         <parent link="base_link" />
         <child link="left_wheel" />
-        <origin xyz="0.0 0.2775 -0.045" rpy="-1.5708 0 0"/>
+        <origin xyz="0.0 0.2775 -0.029" rpy="-1.5708 0 0"/>
         <axis xyz="0 0 1"/>
     </joint>
 
@@ -130,7 +130,7 @@
     <joint name="right_wheel_joint" type="continuous">
         <parent link="base_link" />
         <child link="right_wheel" />
-        <origin xyz="0.0 -0.2775 -0.045" rpy="1.5708 0 0"/>
+        <origin xyz="0.0 -0.2775 -0.029" rpy="1.5708 0 0"/>
         <axis xyz="0 0 -1"/>
     </joint>
 
@@ -159,35 +159,5 @@
     <gazebo reference="right_wheel">
         <material>Gazebo/Blue</material>
     </gazebo>
-
-    
-
-   <!--<joint name="laser_joint" type="fixed">
-        <origin xyz="0.555 0 0.325" rpy="0 0 0" />
-        <parent link="chassis" />
-        <child link="laser" />
-    </joint>
-
-    <link name="laser">
-
-        <visual>
-        <origin rpy="0 0 -1.5708" xyz="0 0 0"/>
-        <geometry>
-            <mesh filename="package://bot_demo/stl/rplidar.stl" scale="0.001 0.001 0.001"/>
-        </geometry>
-        <material name="Yellow"/>
-        </visual>
-
-        <collision>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
-        <geometry>
-            <mesh filename="package://bot_demo/stl/rplidar.stl" scale="0.001 0.001 0.001"/>
-        </geometry>
-        </collision>
-        
-    </link>
-    <gazebo reference="laser">
-        <material>Gazebo/Yellow</material>
-    </gazebo>-->
 
 </robot>
