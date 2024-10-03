@@ -1,45 +1,42 @@
 DWAPlannerROS:
-  max_vel_trans: 3.0  
+  max_vel_trans: 1.0  
   min_vel_trans: 0.01    
-  max_vel_x: 3.0         #maximum linear speed 
-  min_vel_x: 0.0        #minimum linear speed
+  max_vel_x: 1.0         
+  min_vel_x: 0.0        
   max_vel_y: 0 
   min_vel_y: 0
-  max_theta_vel: 5       #maximum rotate speed
-  min_theta_vel: -5      #minimum rotate speed 
-  acc_lim_x: 20.0         #maximum linear acceleration in x 
+  max_theta_vel: 2.5     
+  min_theta_vel: -2.5    
+  acc_lim_x: 5.0        
   acc_lim_y: 0  
-  acc_lim_theta: 20.0     #maximum rotational acceleration 
-  acc_lim_trans: 20.0     
+  acc_lim_theta: 5.0    
+  acc_lim_trans: 5.0    
 
-  prune_plan: true       #whether to clear the trajectory 1m behind it
+  prune_plan: true       
 
   xy_goal_tolerance: 0.1               
   yaw_goal_tolerance: 0.05
   trans_stopped_vel: 0.1                 
   theta_stopped_vel: 0.1
-  latch_xy_goal_tolerance: false       #设置为true,如果到达容错距离内,机器人就会原地旋转,即使转动是会跑出容错距离外.
+  latch_xy_goal_tolerance: false       
   
   allow_backwards: false
-  #Forward Simulation Parameters
-  sim_time: 1.5                        #simluation time  1.2
-  sim_granularity: 0.02                #resolution of the simulation in meters 0.02
-  angular_sim_granularity: 0.025       #smaller values result in a finer granularity
-  vx_samples: 20                       #number of samples to use when exploring the forward velocities space
-  vy_samples: 0                        #number of samples to use when exploring the sideways velocities space
-  vth_samples: 40                      #number of samples to use when exploring the angular velocities space
-  controller_frequency: 10             #controller frequency in Hz
+  sim_time: 1.0                        
+  sim_granularity: 0.02                
+  angular_sim_granularity: 0.025       
+  vx_samples: 10                       
+  vy_samples: 0                        
+  vth_samples: 20                      
+  controller_frequency: 10             
 
-  #Trajectory Scoring Parameters
-  path_distance_bias: 32.0             #weight for the path distance cost function
-  goal_distance_bias: 10.0             #weight for the goal distance cost function
-  occdist_scale: 0.30                  #scaling factor for the maximum distance from an obstacle allowed for the robot to be considered in collision. The value should typically be between 0 and 1. A lower value will make the robot more conservative in terms of collision avoidance.#0.02  #定义控制器躲避障碍物的程度
-  forward_point_distance: 0.325          #the distance threshold to create a new point in meters 0.325
-  stop_time_buffer: 0.2                #the buffer time to prevent robot from rotating between forward and backward in seconds
-  scaling_speed: 0.25                  #the scaling factor for the robot's velocity
-  max_scaling_factor: 0.2              #the maximum scaling factor for the robot's velocity
+  path_distance_bias: 32.0             
+  goal_distance_bias: 10.0             
+  occdist_scale: 0.5                   
+  forward_point_distance: 0.325         
+  stop_time_buffer: 0.2                
+  scaling_speed: 0.25                  
+  max_scaling_factor: 0.2              
 
-  #Oscillation Prevention Parameters
   oscillation_reset_dist: 0.05         
   oscillation_reset_angle: 0.2
 
