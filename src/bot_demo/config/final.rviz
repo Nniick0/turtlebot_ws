@@ -6,6 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /PoseArray1
       Splitter Ratio: 0.5
     Tree Height: 549
   - Class: rviz/Selection
@@ -205,6 +206,22 @@ Visualization Manager:
       Unreliable: false
       Use Timestamp: false
       Value: true
+    - Alpha: 1
+      Arrow Length: 0.30000001192092896
+      Axes Length: 0.30000001192092896
+      Axes Radius: 0.009999999776482582
+      Class: rviz/PoseArray
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.07000000029802322
+      Head Radius: 0.029999999329447746
+      Name: PoseArray
+      Shaft Length: 0.23000000417232513
+      Shaft Radius: 0.009999999776482582
+      Shape: Arrow (Flat)
+      Topic: /particlecloud
+      Unreliable: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -248,10 +265,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.5697963237762451
+      Pitch: 0.7647968530654907
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.0354013442993164
+      Yaw: 3.4604151248931885
     Saved: ~
 Window Geometry:
   Displays:
@@ -270,4 +287,4 @@ Window Geometry:
     collapsed: true
   Width: 1267
   X: 473
-  Y: 28
+  Y: 27

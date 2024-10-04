@@ -3,7 +3,7 @@ raytrace_range: 3.5
 
 footprint: [[-0.34, -0.2425], [-0.34, 0.2425], [0.34, 0.2425], [0.34, -0.2425]]
 
-inflation_radius: 1.0
+inflation_radius: 0.3
 cost_scaling_factor: 3.0
 
 observation_sources: scan

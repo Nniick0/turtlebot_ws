@@ -10,5 +10,4 @@
 	<!-- 运行rviz可视化界面 -->
 	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find bot_demo)/config/final.rviz"/>
 
-    
 </launch>

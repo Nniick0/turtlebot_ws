@@ -5,9 +5,7 @@
     <xacro:include filename="laser.urdf.xacro" />
     
 
-    
+    <xacro:include filename="gazebo_control.xacro" />
     <xacro:include filename="inertial_macros.xacro" />
-
-    <xacro:include filename="mycamera.urdf.xacro" />
     <xacro:include filename="mylaser.urdf.xacro" />
 </robot>
