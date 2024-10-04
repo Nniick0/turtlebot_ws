@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./src/ros_arduino_bridge/ros_arduino_python/src"
+    ]
+}
