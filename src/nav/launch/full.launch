@@ -1,4 +1,0 @@
-<launch>
-    <include file="$(find nav)/launch/gmapping.launch"/>
-    <include file="$(find nav)/launch/move_base.launch"/>
-</launch>
