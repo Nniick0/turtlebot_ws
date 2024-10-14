@@ -23,6 +23,16 @@
     <link name="base_link">
     
     </link>
+
+    <link name="imu_link">
+    
+    </link>
+
+    <joint name="imu_joint" type="fixed">
+        <parent link="base_link"/>  
+        <child link="imu_link"/>    
+        <origin xyz="0 0 0.05" rpy="0 0 0"/> 
+    </joint>
     
     <joint name="base_footprint_joint" type="fixed">
         <parent link="base_footprint"/>
@@ -34,7 +44,7 @@
     <joint name ="chassis_joint" type="fixed">
         <parent link="base_link"/>
         <child link="chassis"/>
-        <origin xyz="-0.1 0 0"/>
+        <origin xyz="-0.06 0 0"/>
     </joint>
 
     <link name="chassis">
@@ -159,5 +169,65 @@
     <gazebo reference="right_wheel">
         <material>Gazebo/Blue</material>
     </gazebo>
+
+    <link name="camera_link">
+    
+    </link>
+
+    <joint name="camera_to_base_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="camera_link"/>
+        <origin xyz="0.24 0 0.62" rpy="0 0 0"/> 
+    </joint>
+
+    
+    <link name="camera_color_frame"/>
+    <link name="camera_color_optical_frame"/>
+
+    
+    <joint name="camera_color_joint" type="fixed">
+        <parent link="camera_link"/>
+        <child link="camera_color_frame"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/> 
+    </joint>
+
+    
+    <joint name="camera_color_optical_joint" type="fixed">
+        <parent link="camera_color_frame"/>
+        <child link="camera_color_optical_frame"/>
+        <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708"/> 
+    </joint>
+
+    <link name="camera_depth_frame"/>
+    <link name="camera_depth_optical_frame"/>
+
+    <joint name="camera_depth_joint" type="fixed">
+        <parent link="camera_link"/>
+        <child link="camera_depth_frame"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    
+    <joint name="camera_depth_optical_joint" type="fixed">
+        <parent link="camera_depth_frame"/>
+        <child link="camera_depth_optical_frame"/>
+        <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708"/> 
+    </joint>
+
+    <link name="camera_ir_frame"/>
+    <link name="camera_ir_optical_frame"/>
+
+    <joint name="camera_ir_joint" type="fixed">
+        <parent link="camera_link"/>
+        <child link="camera_ir_frame"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    
+    <joint name="camera_ir_optical_joint" type="fixed">
+        <parent link="camera_ir_frame"/>
+        <child link="camera_ir_optical_frame"/>
+        <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708"/> 
+    </joint>
 
 </robot>
